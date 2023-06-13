@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Product preview card component</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
+
+      * {
+        padding: 0;
+        margin: 0;
+        outline: none;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: pink;
+      }
+
+      .card {
+        background-color: #f2f2f2;
+        width: 350px;
+        margin: 150px auto;
+        border-radius: 10px;
+        padding: 15px;
+      }
+
+      .card-img {
+        display: block;
+        width: 300px;
+        margin: auto;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        margin-bottom: 10px;
+      }
+
+      .card-body {
+        padding: 10px;
+      }
+
+      .card-subtitle {
+        color: gray;
+        margin-bottom: 5px;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .card-title {
+        font-family: "Fraunces", serif;
+        margin-bottom: 10px;
+      }
+
+      .card-text {
+        font-size: 14px;
+        font-family: "Fraunces", serif;
+        color: grey;
+        margin-bottom: 13px;
+      }
+
+      .d-flex {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 20px;
+        font-family: "Fraunces", serif;
+      }
+
+      .d-flex h1 {
+        color: rgb(19, 74, 19);
+        font-size: 30px;
+      }
+
+      .d-flex small {
+        text-decoration: line-through;
+        color: rgb(112, 108, 108);
+        margin-left: 30px;
+        font-size: 15px;
+      }
+
+      button {
+        font-size:15px;
+        background-color: #33b881;
+        color: white;
+        padding: 15px 30px;
+        width: 290px;
+        border-radius: 5px;
+        border: none;
+        font-family: "Fraunces", serif;
+        outline: none;
+        text-align: center;
+      }
+      
+      button:active{
+        background-color: #19573d;
+      }
+
+      svg{
+        margin-right: 10px;
+      }
+
+      @media screen and (min-width: 480px) {
+        /* Desktop */
+        * {
+        padding: 0;
+        margin: 0;
+        outline: none;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: pink;
+      }
+
+        .card {
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          background-color: #f2f2f2;
+          width: 700px;
+          height: 375px;
+          margin: 150px auto;
+          border-radius: 10px;
+        }
+
+        .card-img {
+          display: flex;
+          align-items: center;
+          height: 375px;
+          width: 350px;
+          border-radius: 0;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+        }
+
+        .card-body {
+          align-items: start;
+          /* padding: 10px; */
+          text-align: left;
+          padding-left: 30px;
+        }
+
+        .card-subtitle {
+          color: gray;
+          margin-bottom: 15px;
+          font-family: "Montserrat", sans-serif;
+        }
+
+        .card-title {
+          font-family: "Fraunces", serif;
+          margin-bottom: 20px;
+        }
+
+        .card-text {
+          font-size: 14px;
+          font-family: "Fraunces", serif;
+          color: grey;
+          margin-bottom: 25px;
+        }
+
+        .d-flex {
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          margin-left: 30px;
+          margin-bottom: 30px;
+          font-family: "Fraunces", serif;
+        }
+
+        .d-flex h1 {
+          color: rgb(19, 74, 19);
+          font-size: 30px;
+        }
+
+        .d-flex small {
+          text-decoration: line-through;
+          color: rgb(112, 108, 108);
+          margin-left: 30px;
+          font-size: 15px;
+        }
+
+        button {
+          font-size:15px;
+          background-color: #33b881;
+          color: white;
+          padding: 15px 30px;
+          width: 200px;
+          border-radius: 5px;
+          border: none;
+          font-family: "Fraunces", serif;
+          outline: none;
+          text-align: center;
+        }
+
+        button:active{
+        background-color: #19573d;
+      }
+
+      svg{
+        margin-right: 10px;
+      }
+      }
+
+      /* @media screen and(max-width: 375px){
+        * {
+        padding: 0;
+        margin: 0;
+        outline: none;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: pink;
+      }
+
+      .card {
+        background-color: #f2f2f2;
+        width: 350px;
+        margin: 150px auto;
+        border-radius: 10px;
+        padding: 15px;
+      }
+
+      .card-img {
+        display: block;
+        width: 350px;
+        margin: auto;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        margin-bottom: 10px;
+      }
+
+      .card-body {
+        padding: 10px;
+      }
+
+      .card-subtitle {
+        color: gray;
+        margin-bottom: 5px;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .card-title {
+        font-family: "Fraunces", serif;
+        margin-bottom: 10px;
+      }
+
+      .card-text {
+        font-size: 14px;
+        font-family: "Fraunces", serif;
+        color: grey;
+        margin-bottom: 13px;
+      }
+
+      .d-flex {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 20px;
+        font-family: "Fraunces", serif;
+      }
+
+      .d-flex h1 {
+        color: rgb(19, 74, 19);
+        font-size: 30px;
+      }
+
+      .d-flex small{
+        text-decoration: line-through;
+        color: rgb(112, 108, 108);
+        margin-left: 30px;
+        font-size: 15px;
+      }
+
+      button {
+        background-color: #2e8662;
+        color: white;
+        padding: 15px 30px;
+        width: 290px;
+        border-radius: 5px;
+        border: none;
+        font-family: "Fraunces", serif;
+        outline: none;
+        text-align: center;
+      }
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img
+        class="card-img"
+        width="300px"
+        src="./images/image-product-mobile.jpg"
+        alt=""
+      />
+      <div class="card-body">
+        <p class="card-subtitle">P E R F U M E</p>
+        <h1 class="card-title">Gabrielle Essence Eau De Perfume</h1>
+        <p class="card-text">
+          A floral, solar and voluptuous interpretation composed by Oliver
+          Polge, Perfume-Creator for the House of Channel
+        </p>
+        <div class="d-flex">
+          <h1 class="">$149.99</h1>
+          <small class="">$169.99</small>
+        </div>
+        <button class="">
+          <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z" fill="#FFF"/></svg>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
